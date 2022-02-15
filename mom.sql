@@ -29,4 +29,17 @@ INSERT INTO qna VALUES(11,'통신사 할인혜택은 어떻게 되나요?','* �
 INSERT INTO qna VALUES(12,'비회원 1:1문의시 확인이 불가능한가요?','* ',0,'20220202');
 INSERT INTO qna VALUES(13,'문화상품권이나,해피머니 상품권으로도 예매가 가능한가요?','',0,'20220202');
 
+/*작성일이 오래된 순서대로 나열하시오.*/
+SELECT*FROM qna ORDER BY q_date ASC;
 
+/*분실물 에관한 게시글의 내용을 불러오시오.*/
+SELECT q_con FROM qna WHERE q_title like '%분실물%';
+
+/*최신글 순서대로 나열하시오.*/
+SELECT*FROM qna ORDER BY q_date DESC;
+
+/*10번째로 작성된 글의 제목을 가져오시오.*/
+SELECT q_title FROM qna WHERE q_no = 10;
+
+/*총 게시물 갯수를 구하시오.*/
+SELECT count(*) FROM qna;
